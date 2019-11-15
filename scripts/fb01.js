@@ -11,6 +11,7 @@ var uiConfig = {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
+        updateUserStatus();
         return true;
       },
       uiShown: function() {
@@ -38,3 +39,20 @@ var uiConfig = {
   };
 
   ui.start('#firebaseui-auth-container', uiConfig);
+
+
+ function updateUserStatus(){
+    var user = firebase.auth().currentUser;
+    if (user) {
+        console.log('user.', user);
+        // User is signed in.
+        name = user.displayName;
+        email = user.email;
+        photoUrl = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;
+        $("#auth-welcome").append("<h3>Hi " + name + "</h3>");
+    } else {
+        // No user is signed in.
+    }
+ }
