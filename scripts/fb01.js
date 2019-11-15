@@ -1,5 +1,5 @@
 var provider = new firebase.auth.FacebookAuthProvider();
-provider.addScope('user_birthday');
+// provider.addScope('user_birthday');
 firebase.auth().useDeviceLanguage();
 provider.setCustomParameters({
     'display': 'popup'
