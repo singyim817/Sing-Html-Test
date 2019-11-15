@@ -5,31 +5,34 @@
   <title>Sing Test</title>
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDwEtM9s3EF2QwlG1ebRXsvX8UqfM8I7SQ",
-    authDomain: "test-2a52f.firebaseapp.com",
-    databaseURL: "https://test-2a52f.firebaseio.com",
-    projectId: "test-2a52f",
-    storageBucket: "test-2a52f.appspot.com",
-    messagingSenderId: "285382663418",
-    appId: "1:285382663418:web:26084199ff57872534bd43"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDwEtM9s3EF2QwlG1ebRXsvX8UqfM8I7SQ",
+      authDomain: "test-2a52f.firebaseapp.com",
+      databaseURL: "https://test-2a52f.firebaseio.com",
+      projectId: "test-2a52f",
+      storageBucket: "test-2a52f.appspot.com",
+      messagingSenderId: "285382663418",
+      appId: "1:285382663418:web:26084199ff57872534bd43"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="scripts/fb01.js"></script>
 </head>
 <body>
     <h1>Hello world</h1>
-
+    <div id="firebaseui-auth-container" ></div>
 </body>
 </html>
