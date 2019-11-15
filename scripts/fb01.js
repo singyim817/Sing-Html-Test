@@ -40,6 +40,20 @@ var uiConfig = {
 
   ui.start('#firebaseui-auth-container', uiConfig);
 
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        console.log('user.', user);
+        // User is signed in.
+        name = user.displayName;
+        email = user.email;
+        photoUrl = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;
+        $("#auth-welcome").html("<h3>Hi " + name + "</h3>");
+    } else {
+      // No user is signed in.
+    }
+  });
 
  function updateUserStatus(){
     var user = firebase.auth().currentUser;
@@ -51,7 +65,7 @@ var uiConfig = {
         photoUrl = user.photoURL;
         emailVerified = user.emailVerified;
         uid = user.uid;
-        $("#auth-welcome").append("<h3>Hi " + name + "</h3>");
+        $("#auth-welcome").html("<h3>Hi " + name + "</h3>");
     } else {
         // No user is signed in.
     }
